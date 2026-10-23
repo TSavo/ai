@@ -1,5 +1,11 @@
 # @ai-sdk/moonshotai
 
+## 3.0.77
+
+### Patch Changes
+
+- e694a46: fix(moonshotai): accept root unions of objects (including local `$ref` branches) in tool and response schemas, and keep a root `type: "object"` beside `anyOf`
+
 ## 3.0.76
 
 ### Patch Changes
