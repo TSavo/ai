@@ -751,4 +751,32 @@ console.log(text);`,
     websiteUrl: 'https://agentmail.to',
     npmUrl: 'https://www.npmjs.com/package/agentmail-toolkit',
   },
+  {
+    slug: 'swapchan',
+    name: 'SwapChan',
+    description:
+      'Best-price crypto swap and bridge quotes across every DEX aggregator and bridge (Jupiter, 1inch, 0x, CoW, LI.FI, Relay, KyberSwap, Velora, Across, deBridge, THORChain), plus server-verified unsigned transactions and free chain readers (balances, approvals, gas, tx decoding, ENS/SNS). Never holds keys. No API key.',
+    packageName: 'swapchan-ai-sdk',
+    tags: ['crypto', 'defi', 'swap', 'web3'],
+    installCommand: {
+      pnpm: 'pnpm add swapchan-ai-sdk',
+      npm: 'npm install swapchan-ai-sdk',
+      yarn: 'yarn add swapchan-ai-sdk',
+      bun: 'bun add swapchan-ai-sdk',
+    },
+    codeExample: `import { generateText, gateway, isStepCount } from 'ai';
+import { swapchanTools } from 'swapchan-ai-sdk';
+
+const { text } = await generateText({
+  model: gateway('openai/gpt-5-mini'),
+  prompt: 'What is the best price to swap 1 ETH on Base to USDC on Arbitrum?',
+  tools: swapchanTools(),
+  stopWhen: isStepCount(5),
+});
+
+console.log(text);`,
+    docsUrl: 'https://swapchan.com/agents',
+    websiteUrl: 'https://swapchan.com',
+    npmUrl: 'https://www.npmjs.com/package/swapchan-ai-sdk',
+  },
 ];
